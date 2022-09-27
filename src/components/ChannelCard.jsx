@@ -20,7 +20,7 @@ const ChannelCard = ({ channelDetail }) => {
       }}
     >
       {/* Click the link and go directly into the channel */}
-      <Link to={`/channel/${channelDetail?.id?.channelIdf}`}>
+      <Link to={`/channel/${channelDetail?.id?.channelId}`}>
         <CardContent
           sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', color: '#fff' }}
         >
