@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 import { demoChannelTitle, demoProfilePicture } from '../utils/constants';
 
-const ChannelCard = ({ channelDetail }) => {
-  console.log(channelDetail)
+const ChannelCard = ({ channelDetail, marginTop }) => {
+  // console.log(channelDetail)
   return (
     <Box
       sx={{
@@ -16,7 +16,8 @@ const ChannelCard = ({ channelDetail }) => {
         alignItems: 'center',
         width: { xs: '356px', md: '320px' },
         height: '326px',
-        margin: 'auto' 
+        margin: 'auto',
+        marginTop
       }}
     >
       {/* Click the link and go directly into the channel */}
@@ -38,7 +39,7 @@ const ChannelCard = ({ channelDetail }) => {
           {/* Only if there are subscriber counts */}
           {channelDetail?.statistics?.subscriberCount && (
             <Typography>
-              {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()} Su bscribers
+              {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()} Subscribers
             </Typography>
           )}
         </CardContent>
